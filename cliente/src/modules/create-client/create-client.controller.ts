@@ -10,6 +10,7 @@ export class CreateCustomerController {
             const result = await useCase.execute(req.body);
             return res.json(result)
         }catch(err){
+            console.log(err);
             return res.status(400).json(err)
         }
 
